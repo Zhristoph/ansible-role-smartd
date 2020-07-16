@@ -1,0 +1,13 @@
+---
+- name: Install smartmontools
+  tags: smartd
+  apt:
+    name: "smartmontools"
+
+- name: Set /etc/smartd.conf
+  tags: smartd
+  template:
+    src: smartd.conf
+    dest: /etc/smartd.conf
+  notify: restart smartd
+
