@@ -9,5 +9,6 @@
   template:
     src: smartd.conf
     dest: /etc/smartd.conf
+    mode: 0644
   notify: restart smartd
 
